@@ -117,6 +117,15 @@ var CURRENCIES = [{
     hashFunction: 'blake256',
     expectedLength: 26
 },{
+    name: 'cardano',
+    symbol: 'ada',
+    addressTypes: {prod: [], testnet: []},
+    hashFunction: 'blake224',
+},{
+    name: 'monero',
+    symbol: 'xmr',
+    addressTypes: {prod: [], testnet: []},
+},{
     name: 'digibyte',
     symbol: 'dgb',
     addressTypes: {prod: ['1e'], testnet: []},

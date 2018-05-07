@@ -326,6 +326,16 @@ describe('CAValidator.validate()', function () {
             valid('RAvj2KKVUohTu3hVdNJ4U6hQi7TNawpacH', 'KMD');
             //valid('t2UNzUUx8mWBCRYPRezvA363EYXyEpHokyi', 'komodo', 'testnet');
         });
+        
+        it('should return true for correct cardano addresses', function () {
+            valid('DdzFFzCqrhshnNGrGXPycCp9hhjREgs1UGrq5u43LQk6SBrNc6SxEAStAuWrJDostnpfaY2XakBjSCrutcSCrhrAcFCEFAH8DnWSEe8n', 'cardano');
+            valid('4swhHtxKapQbj3TZEipgtp7NQzcRWDYqCxXYoPQWjGyHmhxS1w1TjUEszCQT1sQucGwmPQMYdv1FYs3d51KgoubviPBf', 'ada');
+        });
+        
+        it('should return true for correct monero addresses', function () {
+            valid('44WyHZouRYSGHm7o7y8Dig2h3R9F1Q8g1ctXAwHZ3k2J1rSRXshAHguDBxGe9hAK882CLWRvW7e14hbbH3jYewwWDDxAPbr', 'monero');
+            valid('49bcHjtoqf5EZpRRv56CwQPMeQ8d6bVwKZMhUyieUPrQFydoDHvpTfRfWsCM6r1BgeTxQkSXAHWewL49ArLEWD6c1Y2mfHk', 'xmr');
+        });
     });
 
     describe('invalid results', function () {
@@ -411,6 +421,14 @@ describe('CAValidator.validate()', function () {
 
         it('should return false for incorrect digibyte addresses', function () {
             commonTests('digibyte');
+        });
+
+        it('should return false for incorrect cardano addresses', function () {
+            invalid('0xAff4d6793F584a473348EbA058deb8caad77a288', 'cardano');
+        });
+
+        it('should return false for incorrect monero addresses', function () {
+            invalid('0x02fcd51aAbB814FfFe17908fbc888A8975D839A5', 'monero');
         });
 
         it('should return false for incorrect eip55 addresses', function () {

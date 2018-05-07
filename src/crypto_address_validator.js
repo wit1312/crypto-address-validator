@@ -17,8 +17,17 @@ function getDecoded(address) {
 function getChecksum(hashFunction, payload) {
     // Each currency may implement different hashing algorithm
     switch (hashFunction) {
+        case 'blake224':
+            return cryptoUtils.blake224Checksum(payload);
+            break;
         case 'blake256':
             return cryptoUtils.blake256Checksum(payload);
+            break;
+        case 'blake384':
+            return cryptoUtils.blake384Checksum(payload);
+            break;
+        case 'blake512':
+            return cryptoUtils.blake512Checksum(payload);
             break;
         case 'sha256':
         default:
@@ -58,6 +67,10 @@ function validate(address, currencyNameOrSymbol, networkType) {
 
     if (currency.validator) {
         return currency.validator.isValidAddress(address);
+    }
+
+    if (currency.symbol == 'xmr' || currency.symbol == 'ada') {
+        return getDecoded(address) ? true : false;
     }
 
     var correctAddressTypes;
