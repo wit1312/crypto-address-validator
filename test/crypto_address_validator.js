@@ -3,19 +3,19 @@ var isNode = typeof module !== 'undefined' && typeof module.exports !== 'undefin
 var chai = isNode ? require('chai') : window.chai,
     expect = chai.expect;
 
-var WAValidator = isNode ? require('../src/wallet_address_validator') : window.WAValidator;
+var CAValidator = isNode ? require('../src/crypto_address_validator') : window.CAValidator;
 
 function valid (address, currency, networkType) {
-    var result = WAValidator.validate(address, currency, networkType);
+    var result = CAValidator.validate(address, currency, networkType);
     expect(result).to.be.true;
 }
 
 function invalid (address, currency, networkType) {
-    var result = WAValidator.validate(address, currency, networkType);
+    var result = CAValidator.validate(address, currency, networkType);
     expect(result).to.be.false;
 }
 
-describe('WAValidator.validate()', function () {
+describe('CAValidator.validate()', function () {
     describe('valid results', function () {
         it('should return true for correct bitcoin addresses', function () {
             valid('12KYrjTdVGjFMtaxERSk3gphreJ5US8aUP', 'bitcoin');

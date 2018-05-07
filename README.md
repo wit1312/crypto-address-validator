@@ -1,7 +1,7 @@
-# wallet-address-validator
+# crypto-address-validator
 Simple wallet address validator for validating Bitcoin and other altcoins addresses in **Node.js and browser**. 
 
-Forked from [ryanralph/altcoin-address](https://github.com/ryanralph/altcoin-address).
+Forked from [ognus/wallet-address-validator](https://github.com/ognus/wallet-address-validator).
 
 **File size is ~17 kB (minifed and gzipped)**.
 
@@ -9,12 +9,12 @@ Forked from [ryanralph/altcoin-address](https://github.com/ryanralph/altcoin-add
 
 ### NPM
 ```
-npm install wallet-address-validator
+npm install crypto-address-validator
 ```
 
 ### Browser
 ```html
-<script src="wallet-address-validator.min.js"></script>
+<script src="crypto-address-validator.min.js"></script>
 ```
 
 ## API
@@ -38,7 +38,6 @@ npm install wallet-address-validator
 ### Supported crypto currencies
 
 * Auroracoin/AUR, `'auroracoin'` or `'AUR'`
-
 * BeaverCoin/BVC, `'beavercoin'` or `'BVC'`
 * Biocoin/BIO, `'biocoin'` or `'BIO'`
 * Bitcoin/BTC, `'bitcoin'` or `'BTC'`
@@ -46,52 +45,33 @@ npm install wallet-address-validator
 * BitcoinGold/BTG, `'bitcoingold'` or `'BTG'`
 * BitcoinPrivate/BTCP, `'bitcoinprivate'` or `'BTCP'`
 * BitcoinZ/BTCZ, `'bitcoinz'` or `'BTCZ'`
-
 * Callisto/CLO, `'callisto'` or `'CLO'`
-
 * Dash, `'dash'` or `'DASH'`
 * Decred/DCR, `'decred'` or `'DCR'`
 * Digibyte/DGB, `'digibyte'` or `'DGB'`
 * Dogecoin/DOGE, `'dogecoin'` or `'DOGE'`
-
 * Ethereum/ETH, `'ethereum'` or `'ETH'`
 * EthereumClassic/ETH, `'ethereumclassic'` or `'ETC'`
 * EthereumZero/ETZ, `'etherzero'` or `'ETZ'`
-
 * Freicoin/FRC, `'freicoin'` or `'FRC'`
-
 * Garlicoin/GRLC, `'garlicoin'` or `'GRLC'`
-
 * Hush/HUSH, `'hush'` or `'HUSH'`
-
 * Komodo/KMD, `'komodo'` or `'KMD'`
-
 * Litecoin/LTC, `'litecoin'` or `'LTC'`
-
 * Megacoin/MEC, `'megacoin'` or `'MEC'`
-
 * Namecoin/NMC, `'namecoin'` or `'NMC'`
 * NEO/NEO, `'NEO'` or `'NEO'`
 * NeoGas/GAS, `'neogas'` or `'GAS'`
-
 * Peercoin/PPCoin/PPC, `'peercoin'` or `'PPC'`
 * Primecoin/XPM, `'primecoin'` or `'XPM'`
 * Protoshares/PTS, `'protoshares'` or `'PTS'`
-
 * Qtum/QTUM, `'qtum'` or `'QTUM'`
-
 * Ripple/XRP, `'ripple'` or `'XRP'`
-
 * Snowgem/SNG, `'snowgem'` or `'SNG'`
-
 * Vertcoin/VTC, `'vertcoin'` or `'VTC'`
-
 * Votecoin/VTC, `'votecoin'` or `'VOT'`
-
 * Zcash/ZEC, `'zcash'` or `'ZEC'`
-    
 * Zclassic/ZCL, `'zclassic'` or `'ZCL'`
-
 * ZenCash/ZEN, `'zencash'` or `'ZEN'`
 
 
@@ -99,9 +79,9 @@ npm install wallet-address-validator
 
 #### Node
 ```javascript
-var WAValidator = require('wallet-address-validator');
+var CAValidator = require('crypto-address-validator');
 
-var valid = WAValidator.validate('1KFzzGtDdnq5hrwxXGjwVnKzRbvf8WVxck', 'BTC');
+var valid = CAValidator.validate('1KFzzGtDdnq5hrwxXGjwVnKzRbvf8WVxck', 'BTC');
 if(valid)
 	console.log('This is a valid address');
 else
@@ -111,9 +91,9 @@ else
 ```
 
 ```javascript
-var WAValidator = require('wallet-address-validator');
+var CAValidator = require('crypto-address-validator');
 
-var valid = WAValidator.validate('1KFzzGtDdnq5hrwxXGjwVnKzRbvf8WVxck', 'litecoin', 'testnet');
+var valid = CAValidator.validate('1KFzzGtDdnq5hrwxXGjwVnKzRbvf8WVxck', 'litecoin', 'testnet');
 if(valid)
       console.log('This is a valid address');
 else
@@ -124,12 +104,12 @@ else
 
 #### Browser
 ```html
-<script src="wallet-address-validator.min.js"></script>
+<script src="crypto-address-validator.min.js"></script>
 ```
 
 ```javascript
-// WAValidator is exposed as a global (window.WAValidator)
-var valid = WAValidator.validate('1KFzzGtDdnq5hrwxXGjwVnKzRbvf8WVxck', 'bitcoin');
+// CAValidator is exposed as a global (window.CAValidator)
+var valid = CAValidator.validate('1KFzzGtDdnq5hrwxXGjwVnKzRbvf8WVxck', 'bitcoin');
 if(valid)
     alert('This is a valid address');
 else

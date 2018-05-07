@@ -1,6 +1,6 @@
 {
-  "name": "wallet-address-validator",
-  "description": "Wallet address validator for Bitcoin and other Altcoins.",
+  "name": "crypto-address-validator",
+  "description": "Crypto wallet address validator for Bitcoin and other Altcoins.",
   "keywords": [
     "btc",
     "bitcoin",
@@ -19,27 +19,28 @@
     "altcoin",
     "crypto",
     "address",
+    "crypto",
     "wallet",
     "validator",
     "javascript",
     "browser",
     "nodejs"
   ],
-  "version": "0.1.7",
-  "author": "Tomek Kolasa <tomek@kolasa.me>",
-  "homepage": "https://github.com/ognus/wallet-address-validator",
+  "version": "0.1.1",
+  "author": "Aditio Agung Nugroho <aditioan.uny@gmail.com>",
+  "homepage": "https://github.com/aditioan/crypto-address-validator",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ognus/wallet-address-validator.git"
+    "url": "https://github.com/aditioan/crypto-address-validator.git"
   },
-  "main": "src/wallet_address_validator",
+  "main": "src/crypto_address_validator",
   "engines": {
     "node": "*"
   },
   "scripts": {
-    "bundle": "browserify src/wallet_address_validator.js --standalone WAValidator --outfile dist/wallet-address-validator.js",
-    "minify": "uglifyjs -c -m -o dist/wallet-address-validator.min.js -- dist/wallet-address-validator.js",
+    "bundle": "browserify src/crypto_address_validator.js --standalone CAValidator --outfile dist/crypto-address-validator.js",
+    "minify": "uglifyjs -c -m -o dist/crpyto-address-validator.min.js -- dist/crypto-address-validator.js",
     "test:node": "mocha test",
     "test:browser": "karma start",
     "test": "npm run test:node && npm run test:browser",
