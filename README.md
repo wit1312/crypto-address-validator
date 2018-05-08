@@ -38,23 +38,20 @@ npm install crypto-address-validator
 ### Supported crypto currencies
 
 * Auroracoin/AUR, `'auroracoin'` or `'AUR'`
-* Bamboo/BAMBOO (On progress), `'Bamboo'` or `'BAMBOO'`
 * BeaverCoin/BVC, `'beavercoin'` or `'BVC'`
 * Biocoin/BIO, `'biocoin'` or `'BIO'`
 * Bitcoin/BTC, `'bitcoin'` or `'BTC'`
 * BitcoinCash/BCH, `'bitcoincash'` or `'BCH'`
-* BitcoinCrown/BTCC (On progress), `'bitcoincrown'` or `'BTCC'`
 * BitcoinGold/BTG, `'bitcoingold'` or `'BTG'`
 * BitcoinPrivate/BTCP, `'bitcoinprivate'` or `'BTCP'`
 * BitcoinZ/BTCZ, `'bitcoinz'` or `'BTCZ'`
 * Callisto/CLO, `'callisto'` or `'CLO'`
 * Cardano/ADA, `'cardano'` or `'ADA'`
-* CostaCoin/CTC (On progress), `'costacoin'` or `'CTC'`
 * Dash/DASH, `'dash'` or `'DASH'`
 * Decred/DCR, `'decred'` or `'DCR'`
 * Digibyte/DGB, `'digibyte'` or `'DGB'`
 * Dogecoin/DOGE, `'dogecoin'` or `'DOGE'`
-* Eos/EOS (On progress), `'eos'` or `'EOS'`
+* Eos/EOS, `'eos'` or `'EOS'`
 * Ethereum/ETH, `'ethereum'` or `'ETH'`
 * EthereumClassic/ETH, `'ethereumclassic'` or `'ETC'`
 * EthereumZero/ETZ, `'etherzero'` or `'ETZ'`
@@ -62,23 +59,25 @@ npm install crypto-address-validator
 * Garlicoin/GRLC, `'garlicoin'` or `'GRLC'`
 * Hush/HUSH, `'hush'` or `'HUSH'`
 * Komodo/KMD, `'komodo'` or `'KMD'`
-* Iota/IOTA (On progress), `'iota'` or `'IOTA'`
-* Icon/ICON (On progress), `'icon'` or `'ICON'`
+* Iota/IOTA, `'iota'` or `'IOTA'`
+* Icon/ICON, `'icon'` or `'ICON'`
 * Litecoin/LTC, `'litecoin'` or `'LTC'`
 * Megacoin/MEC, `'megacoin'` or `'MEC'`
 * Monero/XWR, `'monero'` or `'XMR'`
 * Namecoin/NMC, `'namecoin'` or `'NMC'`
-* Nano/NANO (On progress), `'nano'` or `'NANO'`
+* Nano/NANO, `'nano'` or `'NANO'`
 * Neo/NEO, `'neo'` or `'NEO'`
 * NeoGas/GAS, `'neogas'` or `'GAS'`
 * Peercoin/PPCoin/PPC, `'peercoin'` or `'PPC'`
 * Primecoin/XPM, `'primecoin'` or `'XPM'`
 * Protoshares/PTS, `'protoshares'` or `'PTS'`
-* Qash/QASH (On progress), `'qash'` or `'QASH'`
+* Qash/QASH, `'qash'` or `'QASH'`
 * Qtum/QTUM, `'qtum'` or `'QTUM'`
-* RepublicProtocol/REN (On progress), `'republicprotocol'` or `'REN'`
+* Railblocks/XRB), `'railblocks'` or `'XRB'`
+* RepublicProtocol/REN, `'republicprotocol'` or `'REN'`
 * Ripple/XRP, `'ripple'` or `'XRP'`
 * Snowgem/SNG, `'snowgem'` or `'SNG'`
+* StellarLumens/XLM, `'stellarlumens'` or `'XLM'`
 * Vertcoin/VTC, `'vertcoin'` or `'VTC'`
 * Votecoin/VTC, `'votecoin'` or `'VOT'`
 * Zcash/ZEC, `'zcash'` or `'ZEC'`

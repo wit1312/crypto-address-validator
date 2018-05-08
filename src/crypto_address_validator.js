@@ -1,6 +1,7 @@
 var base58 = require('./crypto/base58');
 var cryptoUtils = require('./crypto/utils');
 var currencies = require('./currencies');
+var IOTA = require('iota.lib.js');
 
 var DEFAULT_CURRENCY_NAME = 'bitcoin';
 var DEFAULT_NETWORK_TYPE = 'prod';
@@ -71,6 +72,22 @@ function validate(address, currencyNameOrSymbol, networkType) {
 
     if (currency.symbol == 'xmr' || currency.symbol == 'ada') {
         return getDecoded(address) ? true : false;
+    }
+
+    if (currency.symbol == 'nano' || currency.symbol == 'xrb') {
+        return address.indexOf('xrb_') > -1 ? true : false;
+    }
+
+    if (currency.symbol == 'xlm') {
+        return address.indexOf('G') == 0 && address.length == 56;
+    }
+
+    if (currency.symbol == 'iota') {
+        var iota = new IOTA({
+            'provider': null
+        });
+          
+        return iota.valid.isAddress(address);
     }
 
     var correctAddressTypes;

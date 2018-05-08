@@ -7,6 +7,7 @@ var CAValidator = isNode ? require('../src/crypto_address_validator') : window.C
 
 function valid (address, currency, networkType) {
     var result = CAValidator.validate(address, currency, networkType);
+    // console.log(result)
     expect(result).to.be.true;
 }
 
@@ -336,6 +337,42 @@ describe('CAValidator.validate()', function () {
             valid('44WyHZouRYSGHm7o7y8Dig2h3R9F1Q8g1ctXAwHZ3k2J1rSRXshAHguDBxGe9hAK882CLWRvW7e14hbbH3jYewwWDDxAPbr', 'monero');
             valid('49bcHjtoqf5EZpRRv56CwQPMeQ8d6bVwKZMhUyieUPrQFydoDHvpTfRfWsCM6r1BgeTxQkSXAHWewL49ArLEWD6c1Y2mfHk', 'xmr');
         });
+        
+        it('should return true for correct icon addresses', function () {
+            valid('0x03747f06215b44e498831da019b27f53e483599f', 'icon');
+            valid('0xd60a63fa71685d54a4c7cb8a7f7d1823164a62b1', 'icon');
+        });
+        
+        it('should return true for correct nano or raiblocks addresses', function () {
+            valid('xrb_1anrzcuwe64rwxzcco8dkhpyxpi8kd7zsjc1oeimpc3ppca4mrjtwnqposrs', 'nano');
+            valid('	xrb_3pczxuorp48td8645bs3m6c3xotxd3idskrenmi65rbrga5zmkemzhwkaznh', 'railblocks');
+            valid('	xrb_1q79ahdr36uqn38p5tp5sqwkn73rnpj1k8obtuetdbjcx37d5gahhd1u9cuh', 'xrb');
+        });
+        
+        it('should return true for correct iota addresses', function () {
+            valid('QY9XJUVWHY9ILWONEJLENLLETRKFELNVUOUXCTDDDLQSVXHLGDEPMMJPZROKNJSQQVNDPABCCIOZBQJTZ', 'iota');
+            valid('YVGZVANHSLUBSVNUBJMQCHCGYW9ZXTDBZHSVRND9RIZLQHMDGEYMDHLAMTOKPEKDIFOP9BND9QMIKFHSADKJTSBTTX', 'iota');
+        });
+        
+        it('should return true for correct eos addresses', function () {
+            valid('0xc29dc7d7c8557f4f688E8dF1A32F7330ad02f542', 'eos');
+            valid('0x90A6CAecdf88Cb7670457EDd9413e239708FAc50', 'eos');
+        });
+        
+        it('should return true for correct qash addresses', function () {
+            valid('0xe9830ddfd1da3fc5dbea1957d97cdb5092c271f2', 'qash');
+            valid('0x3ed15ca2279a2a73000fa9c0998b811a9569a0aa', 'qash');
+        });
+        
+        it('should return true for correct republic protocol addresses', function () {
+            valid('0x2a0c0dbecc7e4d658f48e01e3fa353f44050c208', 'republic protocol');
+            valid('0x6a188cfb207f987526a62a2368695443512159ae', 'ren');
+        });
+        
+        it('should return true for correct stellar lumens addresses', function () {
+            valid('GDSSTV4HQ4NV5MUNH2LX7Q5MUAGH7KV64PUWTMODPA6JGGJLVKNGY2HP', 'stellar lumens');
+            valid('GBH4TZYZ4IRCPO44CBOLFUHULU2WGALXTAVESQA6432MBJMABBB4GIYI', 'xlm');
+        });
     });
 
     describe('invalid results', function () {
@@ -423,6 +460,18 @@ describe('CAValidator.validate()', function () {
             commonTests('digibyte');
         });
 
+        it('should return false for incorrect nano or railblocks addresses', function () {
+            commonTests('nano');
+        });
+
+        it('should return false for incorrect iota addresses', function () {
+            commonTests('iota');
+        });
+
+        it('should return false for incorrect stellar lumens addresses', function () {
+            commonTests('xlm');
+        });
+
         it('should return false for incorrect cardano addresses', function () {
             invalid('0xAff4d6793F584a473348EbA058deb8caad77a288', 'cardano');
         });
@@ -441,6 +490,10 @@ describe('CAValidator.validate()', function () {
             invalid('0x02fcd51aAbB814FfFe17908fbc888A8975D839A5', 'ethereumclassic');
             invalid('0x02fcd51aAbB814FfFe17908fbc888A8975D839A5', 'etherzero');
             invalid('0x02fcd51aAbB814FfFe17908fbc888A8975D839A5', 'callisto');
+            invalid('0x02fcd51aAbB814FfFe17908fbc888A8975D839A5', 'icon');
+            invalid('0x02fcd51aAbB814FfFe17908fbc888A8975D839A5', 'eos');
+            invalid('0x02fcd51aAbB814FfFe17908fbc888A8975D839A5', 'qash');
+            invalid('0x02fcd51aAbB814FfFe17908fbc888A8975D839A5', 'ren');
         });
 
         it('should return false for incorrect ripple addresses', function () {

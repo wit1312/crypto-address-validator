@@ -40,7 +40,7 @@
   },
   "scripts": {
     "bundle": "browserify src/crypto_address_validator.js --standalone CAValidator --outfile dist/crypto-address-validator.js",
-    "minify": "uglifyjs -c -m -o dist/crpyto-address-validator.min.js -- dist/crypto-address-validator.js",
+    "minify": "uglifyjs -c -m -o dist/crypto-address-validator.min.js -- dist/crypto-address-validator.js",
     "test:node": "mocha test",
     "test:browser": "karma start",
     "test": "npm run test:node && npm run test:browser",
@@ -48,6 +48,7 @@
   },
   "dependencies": {
     "base-x": "^3.0.4",
+    "iota.lib.js": "^0.4.7",
     "jssha": "2.3.1"
   },
   "devDependencies": {

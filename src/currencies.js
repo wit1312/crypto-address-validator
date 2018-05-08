@@ -122,6 +122,18 @@ var CURRENCIES = [{
     addressTypes: {prod: [], testnet: []},
     hashFunction: 'blake224',
 },{
+    name: 'iota',
+    symbol: 'iota',
+    addressTypes: {prod: [], testnet: []},
+},{
+    name: 'nano',
+    symbol: 'nano',
+    addressTypes: {prod: [], testnet: []},
+},{
+    name: 'railblocks',
+    symbol: 'xrb',
+    addressTypes: {prod: [], testnet: []},
+},{
     name: 'monero',
     symbol: 'xmr',
     addressTypes: {prod: [], testnet: []},
@@ -146,9 +158,29 @@ var CURRENCIES = [{
     symbol: 'clo',
     validator: ETHValidator,
 },{
+    name: 'icon',
+    symbol: 'icon',
+    validator: ETHValidator,
+},{
+    name: 'eos',
+    symbol: 'eos',
+    validator: ETHValidator,
+},{
+    name: 'qash',
+    symbol: 'qash',
+    validator: ETHValidator,
+},{
+    name: 'republic protocol',
+    symbol: 'ren',
+    validator: ETHValidator,
+},{
     name: 'ripple',
     symbol: 'xrp',
     validator: XRPValidator,
+},{
+    name: 'stellar lumens',
+    symbol: 'xlm',
+    addressTypes: {prod: ['1e'], testnet: []},
 },{
     name: 'dash',
     symbol: 'dash',
