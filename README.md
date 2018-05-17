@@ -68,6 +68,7 @@ npm install cryptocurrency-address-validator
 * Nano/NANO, `'nano'` or `'NANO'`
 * Neo/NEO, `'neo'` or `'NEO'`
 * NeoGas/GAS, `'neogas'` or `'GAS'`
+* Nem/NEM, `'nem'` or `'nem'`
 * Peercoin/PPCoin/PPC, `'peercoin'` or `'PPC'`
 * Primecoin/XPM, `'primecoin'` or `'XPM'`
 * Protoshares/PTS, `'protoshares'` or `'PTS'`
@@ -78,7 +79,9 @@ npm install cryptocurrency-address-validator
 * Ripple/XRP, `'ripple'` or `'XRP'`
 * Snowgem/SNG, `'snowgem'` or `'SNG'`
 * StellarLumens/XLM, `'stellarlumens'` or `'XLM'`
+* Tronix/TRX, `'tronix'` or `'TRX'`
 * Vertcoin/VTC, `'vertcoin'` or `'VTC'`
+* VeChain, `'vechain'` or `'VeChain'` 
 * Votecoin/VTC, `'votecoin'` or `'VOT'`
 * Zcash/ZEC, `'zcash'` or `'ZEC'`
 * Zclassic/ZCL, `'zclassic'` or `'ZCL'`

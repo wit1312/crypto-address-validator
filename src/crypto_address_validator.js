@@ -79,7 +79,11 @@ function validate(address, currencyNameOrSymbol, networkType) {
     }
 
     if (currency.symbol == 'xlm') {
-        return address.indexOf('G') == 0 && address.length == 56;
+        return (address.indexOf('G') == 0 || address.indexOf('g') == 0) && address.length == 56;
+    }
+
+    if (currency.symbol == 'nem') {
+        return (address.indexOf('N') == 0 || address.indexOf('T') == 0 || address.indexOf('n') == 0 || address.indexOf('t') == 0)  && address.length == 46;
     }
 
     if (currency.symbol == 'iota') {

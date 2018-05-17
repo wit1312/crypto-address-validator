@@ -138,6 +138,10 @@ var CURRENCIES = [{
     symbol: 'xmr',
     addressTypes: {prod: [], testnet: []},
 },{
+    name: 'nem',
+    symbol: 'nem',
+    addressTypes: {prod: [], testnet: []},
+},{
     name: 'digibyte',
     symbol: 'dgb',
     addressTypes: {prod: ['1e'], testnet: []},
@@ -172,6 +176,14 @@ var CURRENCIES = [{
 },{
     name: 'republic protocol',
     symbol: 'ren',
+    validator: ETHValidator,
+},{
+    name: 'tronix',
+    symbol: 'trx',
+    validator: ETHValidator,
+},{
+    name: 'vechain',
+    symbol: 'vechain',
     validator: ETHValidator,
 },{
     name: 'ripple',

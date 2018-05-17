@@ -364,6 +364,20 @@ describe('CAValidator.validate()', function () {
             valid('0x3ed15ca2279a2a73000fa9c0998b811a9569a0aa', 'qash');
         });
         
+        it('should return true for correct tronix addresses', function () {
+            valid('0x46705dfff24256421a05d056c29e81bdc09723b8', 'tronix');
+            valid('0x05ee4cd61f8c7b83d4d310fe80dda49ffa9ba164', 'trx');
+        });
+        
+        it('should return true for correct nem addresses', function () {
+            valid('TBU3ZK-HU6WRY-YXE6LQ-YC6WIO-IXTAVW-WNQK2L-QH2A', 'nem');
+            valid('nb7uva-jkdefp-zja6ff-zwggw3-fk2m7o-ee3uqb-y7qm', 'nem');
+        });
+        
+        it('should return true for correct vechain addresses', function () {
+            valid('0xd551234ae421e3bcba99a0da6d736074f22192ff', 'vechain');
+        });
+        
         it('should return true for correct republic protocol addresses', function () {
             valid('0x2a0c0dbecc7e4d658f48e01e3fa353f44050c208', 'republic protocol');
             valid('0x6a188cfb207f987526a62a2368695443512159ae', 'ren');
@@ -464,6 +478,10 @@ describe('CAValidator.validate()', function () {
             commonTests('nano');
         });
 
+        it('should return false for incorrect nem addresses', function () {
+            commonTests('nem');
+        });
+
         it('should return false for incorrect iota addresses', function () {
             commonTests('iota');
         });
@@ -494,6 +512,8 @@ describe('CAValidator.validate()', function () {
             invalid('0x02fcd51aAbB814FfFe17908fbc888A8975D839A5', 'eos');
             invalid('0x02fcd51aAbB814FfFe17908fbc888A8975D839A5', 'qash');
             invalid('0x02fcd51aAbB814FfFe17908fbc888A8975D839A5', 'ren');
+            invalid('0x02fcd51aAbB814FfFe17908fbc888A8975D839A5', 'trx');
+            invalid('0x02fcd51aAbB814FfFe17908fbc888A8975D839A5', 'vechain');
         });
 
         it('should return false for incorrect ripple addresses', function () {
