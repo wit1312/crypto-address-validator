@@ -1,5 +1,6 @@
 var XRPValidator = require('./ripple_validator');
 var ETHValidator = require('./ethereum_validator');
+var NEMValidator = require('./nem_validator');
 
 // defines P2PKH and P2SH address types for standard (prod) and testnet networks
 var CURRENCIES = [{
@@ -138,10 +139,6 @@ var CURRENCIES = [{
     symbol: 'xmr',
     addressTypes: {prod: [], testnet: []},
 },{
-    name: 'nem',
-    symbol: 'nem',
-    addressTypes: {prod: [], testnet: []},
-},{
     name: 'digibyte',
     symbol: 'dgb',
     addressTypes: {prod: ['1e'], testnet: []},
@@ -209,6 +206,10 @@ var CURRENCIES = [{
     name: 'qtum',
     symbol: 'qtum',
     addressTypes: {prod: ['3a', '32'], testnet: ['6f', 'c4']}
+},{
+    name: 'nem',
+    symbol: 'nem',
+    validator: NEMValidator,
 }];
 
 
