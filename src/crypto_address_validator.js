@@ -1,7 +1,7 @@
 var base58 = require('./crypto/base58');
 var cryptoUtils = require('./crypto/utils');
 var currencies = require('./currencies');
-var IOTA = require('iota.lib.js');
+var iota = require('@iota/validators');
 
 var DEFAULT_CURRENCY_NAME = 'bitcoin';
 var DEFAULT_NETWORK_TYPE = 'prod';
@@ -87,11 +87,7 @@ function validate(address, currencyNameOrSymbol, networkType) {
     }
 
     if (currency.symbol == 'iota') {
-        var iota = new IOTA({
-            'provider': null
-        });
-          
-        return iota.valid.isAddress(address);
+        return iota.isAddress(address);
     }
 
     var correctAddressTypes;

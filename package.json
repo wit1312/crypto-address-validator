@@ -61,7 +61,7 @@
     "browser",
     "nodejs"
   ],
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Aditio Agung Nugroho <aditioan.uny@gmail.com>",
   "homepage": "https://github.com/wit1312/crypto-address-validator",
   "license": "MIT",
@@ -75,28 +75,28 @@
   },
   "scripts": {
     "bundle": "browserify src/crypto_address_validator.js --standalone CAValidator --outfile dist/crypto-address-validator.js",
-    "minify": "uglifyjs -c -m -o dist/crypto-address-validator.min.js -- dist/crypto-address-validator.js",
+    "minify": "terser -c -m -o dist/crypto-address-validator.min.js -- dist/crypto-address-validator.js",
     "test:node": "mocha test",
     "test:browser": "karma start",
     "test": "npm run test:node && npm run test:browser",
     "start": "npm run bundle && npm run minify && npm test"
   },
   "dependencies": {
+    "@iota/validators": "^1.0.0-beta.12",
     "base-x": "^3.0.4",
     "bchaddrjs": "^0.3.0",
     "crypto-js": "^3.1.9-1",
-    "iota.lib.js": "^0.4.7",
     "jssha": "2.3.1",
     "uglify-es": "^3.3.9"
   },
   "devDependencies": {
     "browserify": "^15.1.0",
     "chai": "^4.1.2",
-    "karma": "^2.0.0",
+    "karma": "^4.1.0",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-mocha": "^1.3.0",
     "mocha": "^5.0.2",
-    "uglify-js": "^3.3.13"
+    "terser": "^3.17.0"
   }
 }
